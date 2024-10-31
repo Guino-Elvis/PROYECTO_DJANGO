@@ -1,0 +1,98 @@
+Crear un entorno virtual: D:\PROYECTO_C8_DJANGO_PYTHON>  python -m venv myenv
+
+Activar el entorno virtual: D:\PROYECTO_C8_DJANGO_PYTHON>myenv\Scripts\activate
+
+instalar django : (myenv) D:\PROYECTO_C8_DJANGO_PYTHON>pip install django
+
+crear proyecto django : (myenv) D:\PROYECTO_C8_DJANGO_PYTHON>django-admin startproject proyectoweb
+
+instalar lo demás para usar igual que laravel pero entrar a la carpeta donde se encuentra el entorno virutal algo asi: (myenv) D:\PROYECTO_C8_DJANGO_PYTHON>cd D:\PROYECTO_C8_DJANGO_PYTHON\proyectoweb
+
+
+aquí instalar todo tus librerías : (myenv) D:\PROYECTO_C8_DJANGO_PYTHON\proyectoweb>pip install mysqlclient
+
+instalar txt para dependencias : (myenv) D:\PROYECTO_C8_DJANGO_PYTHON\proyectoweb>pip freeze > requirements.txt
+
+
+correr servidor : (myenv) D:\PROYECTO_C8_DJANGO_PYTHON\proyectoweb>python manage.py runserver
+
+
+
+-------------
+activar esto para usar en visual code  :  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+---------------------
+crear subcarpetas para gestionar mejor  python manage.py startapp categorias
+
+
+-----------------------------
+primero llenamos los campos del modelo y aplciamos esto 
+
+(myenv) D:\PROYECTO_C8_DJANGO_PYTHON\proyectoweb> python manage.py makemigrations
+
+
+después recién migramos
+
+python manage.py migrate
+
+
+
+--------------instalación de tailwind en django  siempre donjde se encuentra manage.py
+
+
+python -m pip install django-tailwind
+
+python -m pip install 'django-tailwind[reload]'
+
+Añadir 'tailwind'a :INSTALLED_APPS​settings.py
+
+INSTALLED_APPS = [
+  # other Django apps
+  'tailwind',
+]
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+
+python manage.py tailwind init  :: llamar theme 
+
+
+python manage.py tailwind install
+
+-----------------
+correr tailwind
+
+
+python manage.py tailwind start
+
+python manage.py runserver
+
+
+
+-------------
+creación de super usuario
+
+python manage.py createsuperuser
+
+
+ admin
+ admin
+
+
+superadmin
+admin12345678
+
+  -------------------------------
+
+  instalar desde git 
+
+  clonas y pones esto peroo mantes creas el entorno virual y recien 
+
+  python -m venv myenv
+  myenv\Scripts\activate  # En Windows
+  pip install -r requirements.txt
